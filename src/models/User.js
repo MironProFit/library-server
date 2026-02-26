@@ -6,11 +6,15 @@ const userShema = new mongoose.Schema(
       type: String,
       required: [true, 'Имя обязательно'],
       minlength: [2, 'Имя не может быть короче 2 символов'],
+      uppercase: true,
+      trim: true,
     },
     lastName: {
       type: String,
       required: [true, 'Фамилия обязательна'],
       minlength: [2, 'Фамилия не может быть короче 2 символов'],
+      uppercase: true,
+      trim: true,
     },
     username: {
       type: String,
