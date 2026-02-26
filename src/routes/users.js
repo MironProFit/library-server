@@ -105,6 +105,7 @@ router.put('/:id', async (req, res) => {
 })
 
 // 5. DELETE /api/users/:id - Удалить пользователя
+
 router.delete('/:id', async (req, res) => {
   try {
     const user = await User.findByIdAndDelete(req.params.id)
